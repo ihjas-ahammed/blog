@@ -13,11 +13,23 @@ const Home = () => {
             setdata(r.data)
 
             console.log(data)
+        }).catch(
+            (e) =>{
+                console.log(e)
+            }
+        ).finally(()=>{
+
         })
 
     axios.get('https://jsonplaceholder.typicode.com/users')
         .then((r) => {
             setUsers(r.data)
+        }).catch(
+            (e) =>{
+                console.log(e)
+            }
+        ).finally(()=>{
+            
         })
 
     const getUserName = (id) => {
@@ -31,11 +43,11 @@ const Home = () => {
 
     return (
         <>
-            <Paper elevation={0}>
+            <Paper elevation={0} >
                 {
                     data.map((i) => {
                         return (
-                            <Card style={{ margin: "20px", padding: "10px" }}>
+                            <Card style={{ margin: "50px", padding: "30px" }}>
                                 <Typography variant="h3">{i.title}</Typography>
                                 <Typography variant="h6">{getUserName(i.userId)}</Typography>
                                 <Typography variant="p">{i.body}</Typography>

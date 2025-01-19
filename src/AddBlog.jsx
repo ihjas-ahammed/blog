@@ -3,10 +3,10 @@ import React from 'react'
 
 const AddBlog = () => {
   return (
-    <Stack>
-        <TextField variant="filled" label="Blog Name"/>
-        <TextField variant="filled" label="Author Name"/>
-        <TextField variant="filled" label="Blog Name"/>
+    <Stack spacing={3} margin={10}>
+        <TextField variant="outlined" label="Blog Name"/>
+        <TextField variant="outlined" label="Author Name"/>
+        <TextField variant="outlined" label="Blog Name"/>
         <Button>Submit</Button>
     </Stack>
   )
